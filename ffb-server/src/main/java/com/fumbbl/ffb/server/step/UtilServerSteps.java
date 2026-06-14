@@ -21,6 +21,7 @@ import com.fumbbl.ffb.server.util.UtilServerGame;
 import com.fumbbl.ffb.server.util.UtilServerPlayerMove;
 import com.fumbbl.ffb.util.ArrayTool;
 import com.fumbbl.ffb.util.StringTool;
+import com.fumbbl.ffb.RulesCollection;
 
 /**
  * @author Kalimar
@@ -114,8 +115,9 @@ public class UtilServerSteps {
 	}
 
 	public static boolean checkEndOfHalf(GameState gameState) {
-		Game game = gameState.getGame();
-		return (game.getTurnDataHome().getTurnNr() >= 8) && (game.getTurnDataAway().getTurnNr() >= 8);
-	}
+    Game game = gameState.getGame();
+    int turnsPerHalf = game.getOptions().getRulesVersion().isOrExtends(RulesCollection.Rules.BB2025SEVENS) ? 6 : 8;
+    return (game.getTurnDataHome().getTurnNr() >= turnsPerHalf) && (game.getTurnDataAway().getTurnNr() >= turnsPerHalf);
+}
 
 }

@@ -229,6 +229,12 @@ public class UtilServerStartGame {
 			ruleSet.setValue(RulesCollection.Rules.BB2025.name());
 //			ruleSet.setValue(RulesCollection.Rules.BB2016.name());
 			game.getOptions().addOption(ruleSet);
+			// Sevens - número de jugadores en campo
+if (RulesCollection.Rules.BB2025SEVENS.name().equals(ruleSet.getValue())) {
+    GameOptionInt maxPlayersOnField = (GameOptionInt) optionFactory.createGameOption(GameOptionId.MAX_PLAYERS_ON_FIELD);
+    maxPlayersOnField.setValue(7);
+    game.getOptions().addOption(maxPlayersOnField);
+}
 			GameOptionBoolean overtime = (GameOptionBoolean) optionFactory.createGameOption(GameOptionId.OVERTIME);
 			overtime.setValue(true);
 			//game.getOptions().addOption(overtime);
