@@ -13,27 +13,46 @@ import com.fumbbl.ffb.json.UtilJson;
  */
 public class FieldCoordinate implements IJsonSerializable {
 
-	public static final int FIELD_WIDTH = 26;
-	public static final int FIELD_HEIGHT = 15;
+    public static final int FIELD_WIDTH = 26;
+    public static final int FIELD_HEIGHT = 15;
 
-	public static final int RSV_HOME_X = -1;
-	public static final int KO_HOME_X = -2;
-	public static final int BH_HOME_X = -3;
-	public static final int SI_HOME_X = -4;
-	public static final int RIP_HOME_X = -5;
-	public static final int BAN_HOME_X = -6;
-	public static final int MNG_HOME_X = -7;
+    // Sevens
+    public static final int FIELD_WIDTH_SEVENS = 20;
+    public static final int FIELD_HEIGHT_SEVENS = 11;
 
-	public static final int RSV_AWAY_X = 30;
-	public static final int KO_AWAY_X = 31;
-	public static final int BH_AWAY_X = 32;
-	public static final int SI_AWAY_X = 33;
-	public static final int RIP_AWAY_X = 34;
-	public static final int BAN_AWAY_X = 35;
-	public static final int MNG_AWAY_X = 36;
+    public static final int RSV_HOME_X = -1;
+    public static final int KO_HOME_X = -2;
+    public static final int BH_HOME_X = -3;
+    public static final int SI_HOME_X = -4;
+    public static final int RIP_HOME_X = -5;
+    public static final int BAN_HOME_X = -6;
+    public static final int MNG_HOME_X = -7;
 
-	public static final FieldCoordinate SWEET_SPOT_AWAY = new FieldCoordinate(19, 7);
-	public static final FieldCoordinate SWEET_SPOT_HOME = new FieldCoordinate(6, 7);
+    public static final int RSV_AWAY_X = 30;
+    public static final int KO_AWAY_X = 31;
+    public static final int BH_AWAY_X = 32;
+    public static final int SI_AWAY_X = 33;
+    public static final int RIP_AWAY_X = 34;
+    public static final int BAN_AWAY_X = 35;
+    public static final int MNG_AWAY_X = 36;
+
+    // Sevens - cajas AWAY más cercanas al campo pequeño
+    public static final int RSV_AWAY_X_SEVENS = 24;
+    public static final int KO_AWAY_X_SEVENS  = 25;
+    public static final int BH_AWAY_X_SEVENS  = 26;
+    public static final int SI_AWAY_X_SEVENS  = 27;
+    public static final int RIP_AWAY_X_SEVENS = 28;
+    public static final int BAN_AWAY_X_SEVENS = 29;
+    public static final int MNG_AWAY_X_SEVENS = 30;
+
+    public static final FieldCoordinate SWEET_SPOT_AWAY = new FieldCoordinate(19, 7);
+    public static final FieldCoordinate SWEET_SPOT_HOME = new FieldCoordinate(6, 7);
+
+    // Sevens - sweet spots para campo 20x11
+    public static final FieldCoordinate SWEET_SPOT_AWAY_SEVENS = new FieldCoordinate(13, 5);
+    public static final FieldCoordinate SWEET_SPOT_HOME_SEVENS = new FieldCoordinate(6, 5);
+
+    // ... resto del archivo igual, sin tocar nada más
 
 	private int fX;
 	private int fY;

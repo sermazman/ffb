@@ -12,7 +12,8 @@ public @interface RulesCollection {
 		COMMON(null),
 		BB2016(COMMON),
 		BB2020(COMMON),
-		BB2025(COMMON);
+		BB2025(COMMON),
+		BB2025SEVENS(BB2025);
 
 		private final Rules extending;
 
